@@ -99,7 +99,8 @@ let s:cdDiffGreenDark = {'gui': '#373D29', 'cterm': s:cterm0B, 'cterm256': '237'
 let s:cdDiffGreenLight = {'gui': '#4B5632', 'cterm': s:cterm09, 'cterm256': '58'}
 
 let s:cdSearchCurrent = {'gui': '#49545F', 'cterm': s:cterm09, 'cterm256': '236'}
-let s:cdSearch = {'gui': '#4C4E50', 'cterm': s:cterm0A, 'cterm256': '236'}
+"let s:cdSearch = {'gui': '#4C4E50', 'cterm': s:cterm0A, 'cterm256': '236'} " Theirs
+let s:cdSearch = {'gui': '#af5f00', 'cterm': s:cterm0A, 'cterm256': '130'}  " My change
 
 " Syntax colors:
 
@@ -141,7 +142,8 @@ call <sid>hi('DiffText', {}, s:cdDiffRedLight, 'none', {})
 call <sid>hi('EndOfBuffer', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('ErrorMsg', s:cdRed, s:cdBack, 'none', {})
 call <sid>hi('VertSplit', s:cdSplitDark, s:cdBack, 'none', {})
-call <sid>hi('Folded', s:cdLeftLight, s:cdLeftDark, 'underline', {})
+"call <sid>hi('Folded', s:cdLeftLight, s:cdLeftDark, 'underline', {})  " Their's
+call <sid>hi('Folded', s:cdFront, s:cdLeftLight, 'underline', {})  " My change here
 call <sid>hi('FoldColumn', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('SignColumn', {}, s:cdBack, 'none', {})
 call <sid>hi('IncSearch', s:cdNone, s:cdSearchCurrent, 'none', {})
