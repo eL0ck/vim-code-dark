@@ -184,7 +184,8 @@ call <sid>hi('Boolean', s:cdBlue, {}, 'none', {})
 call <sid>hi('Float', s:cdLightGreen, {}, 'none', {})
 
 call <sid>hi('Identifier', s:cdLightBlue, {}, 'none', {})
-call <sid>hi('Function', s:cdYellow, {}, 'none', {})
+"call <sid>hi('Function', s:cdYellow, {}, 'none', {})  " Theirs
+call <sid>hi('Function', s:cdPink, {}, 'none', {})  " Can't read functions or specials
 
 call <sid>hi('Statement', s:cdPink, {}, 'none', {})
 call <sid>hi('Conditional', s:cdPink, {}, 'none', {})
