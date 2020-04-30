@@ -1,5 +1,8 @@
 " Vim Code Dark (color scheme)
 " https://github.com/tomasiser/vim-code-dark
+"
+" TIMS: Check colors here: https://jonasjacek.github.io/colors/
+" gui colors seem to be the ones to set 
 
 scriptencoding utf-8
 
@@ -98,9 +101,10 @@ let s:cdDiffRedLightLight = {'gui': '#FB0101', 'cterm': s:cterm08, 'cterm256': '
 let s:cdDiffGreenDark = {'gui': '#373D29', 'cterm': s:cterm0B, 'cterm256': '237'}
 let s:cdDiffGreenLight = {'gui': '#4B5632', 'cterm': s:cterm09, 'cterm256': '58'}
 
-let s:cdSearchCurrent = {'gui': '#49545F', 'cterm': s:cterm09, 'cterm256': '236'}
+"let s:cdSearchCurrent = {'gui': '#49545F', 'cterm': s:cterm09, 'cterm256': '236'} " Theirs: couldn't see cursor item
+let s:cdSearchCurrent = {'gui': '#ff8700', 'cterm': s:cterm09, 'cterm256': '208'} " TIMS: DarkOrange
 "let s:cdSearch = {'gui': '#4C4E50', 'cterm': s:cterm0A, 'cterm256': '236'} " Theirs
-let s:cdSearch = {'gui': '#af5f00', 'cterm': s:cterm0A, 'cterm256': '130'}  " My change
+let s:cdSearch = {'gui': '#af5f00', 'cterm': s:cterm0A, 'cterm256': '130'}  " TIMS: DarkOrage3
 
 " Syntax colors:
 
@@ -142,8 +146,8 @@ call <sid>hi('DiffText', {}, s:cdDiffRedLight, 'none', {})
 call <sid>hi('EndOfBuffer', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('ErrorMsg', s:cdRed, s:cdBack, 'none', {})
 call <sid>hi('VertSplit', s:cdSplitDark, s:cdBack, 'none', {})
-"call <sid>hi('Folded', s:cdLeftLight, s:cdLeftDark, 'underline', {})  " Their's
-call <sid>hi('Folded', s:cdFront, s:cdLeftLight, 'underline', {})  " My change here
+call <sid>hi('Folded', s:cdLeftLight, s:cdLeftDark, 'underline', {})  " Their's
+"call <sid>hi('Folded', s:cdFront, s:cdLeftLight, 'underline', {})  " TIMS: My change here
 call <sid>hi('FoldColumn', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('SignColumn', {}, s:cdBack, 'none', {})
 call <sid>hi('IncSearch', s:cdNone, s:cdSearchCurrent, 'none', {})
@@ -161,7 +165,8 @@ call <sid>hi('Question', s:cdBlue, s:cdBack, 'none', {})
 call <sid>hi('Search', s:cdNone, s:cdSearch, 'none', {})
 call <sid>hi('SpecialKey', s:cdBlue, s:cdNone, 'none', {})
 call <sid>hi('SpellBad', s:cdLightBlue, s:cdLightRed, 'undercurl', {})
-call <sid>hi('SpellCap', s:cdLightBlue, s:cdYellow, 'undercurl', {})
+"call <sid>hi('SpellCap', s:cdLightBlue, s:cdYellow, 'undercurl', {}) " Theirs
+call <sid>hi('SpellCap', s:cdLightBlue, s:cdNone, 'undercurl', {}) " TIMS: Couldn't read warnings
 call <sid>hi('SpellLocal', s:cdNone, s:cdNone, 'undercurl', {})
 call <sid>hi('StatusLine', s:cdFront, s:cdLeftMid, 'none', {})
 call <sid>hi('StatusLineNC', s:cdFront, s:cdLeftDark, 'none', {})
@@ -185,7 +190,7 @@ call <sid>hi('Float', s:cdLightGreen, {}, 'none', {})
 
 call <sid>hi('Identifier', s:cdLightBlue, {}, 'none', {})
 "call <sid>hi('Function', s:cdYellow, {}, 'none', {})  " Theirs
-call <sid>hi('Function', s:cdPink, {}, 'none', {})  " Can't read functions or specials
+call <sid>hi('Function', s:cdPink, {}, 'none', {})  " TIMS: Can't read functions or specials
 
 call <sid>hi('Statement', s:cdPink, {}, 'none', {})
 call <sid>hi('Conditional', s:cdPink, {}, 'none', {})
