@@ -74,7 +74,7 @@ endif
 let s:cdNone = {'gui': 'NONE', 'cterm': 'NONE', 'cterm256': 'NONE'}
 let s:cdFront = {'gui': '#D4D4D4', 'cterm': s:cterm05, 'cterm256': '188'}
 "let s:cdBack = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '234'}
-let s:cdBack = s:cdNone
+let s:cdBack = s:cdNone " Inherit terminal background (transparency)
 
 let s:cdTabCurrent = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '234'}
 let s:cdTabOther = {'gui': '#2D2D2D', 'cterm': s:cterm01, 'cterm256': '236'}
@@ -116,7 +116,7 @@ if !exists("g:codedark_conservative")
     let g:codedark_conservative=0
 endif
 
-let s:cdGray = {'gui': '#808080', 'cterm': s:cterm04, 'cterm256': '08'}
+let s:cdGray = {'gui': '#808080', 'cterm': s:cterm04, 'cterm256': '08'} " Theirs: terrible on light/transparent
 let s:cdViolet = {'gui': '#646695', 'cterm': s:cterm04, 'cterm256': '60'}
 let s:cdBlue = {'gui': '#569CD6', 'cterm': s:cterm0D, 'cterm256': '75'}
 let s:cdDarkBlue = {'gui': '#223E55', 'cterm': s:cterm0D, 'cterm256': '73'}
@@ -150,8 +150,8 @@ call <sid>hi('DiffText', {}, s:cdDiffRedLight, 'none', {})
 call <sid>hi('EndOfBuffer', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('ErrorMsg', s:cdRed, s:cdBack, 'none', {})
 call <sid>hi('VertSplit', s:cdSplitDark, s:cdBack, 'none', {})
-call <sid>hi('Folded', s:cdLeftLight, s:cdLeftDark, 'underline', {})  " Their's
-"call <sid>hi('Folded', s:cdFront, s:cdLeftLight, 'underline', {})  " TIMS: My change here
+"call <sid>hi('Folded', s:cdLeftLight, s:cdLeftDark, 'underline', {})  " Their's
+call <sid>hi('Folded', s:cdLeftLight, s:cdNone, 'none', {})  " TIMS: My change here
 call <sid>hi('FoldColumn', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('SignColumn', {}, s:cdBack, 'none', {})
 call <sid>hi('IncSearch', s:cdNone, s:cdSearchCurrent, 'none', {})
@@ -356,10 +356,10 @@ call <sid>hi('texDocType', s:cdPink, {}, 'none', {})
 call <sid>hi('texDocTypeArgs', s:cdLightBlue, {}, 'none', {})
 
 " Git:
-call <sid>hi('gitcommitHeader', s:cdGray, {}, 'none', {})
-call <sid>hi('gitcommitOnBranch', s:cdGray, {}, 'none', {})
+call <sid>hi('gitcommitHeader', s:cdGreen, {}, 'none', {})
+call <sid>hi('gitcommitOnBranch', s:cdGreen, {}, 'none', {})
 call <sid>hi('gitcommitBranch', s:cdPink, {}, 'none', {})
-call <sid>hi('gitcommitComment', s:cdGray, {}, 'none', {})
+call <sid>hi('gitcommitComment', s:cdGreen, {}, 'none', {})
 call <sid>hi('gitcommitSelectedType', s:cdGreen, {}, 'none', {})
 call <sid>hi('gitcommitSelectedFile', s:cdGreen, {}, 'none', {})
 call <sid>hi('gitcommitDiscardedType', s:cdRed, {}, 'none', {})
